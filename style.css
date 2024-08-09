@@ -1,0 +1,39 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    margin: 0;
+}
+
+/* Content within parent #navBar */
+#navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navBar #logo {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+#navBar #nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+#navBar #nav {
+  width: 50vw;
+  display:flex;
+  justify-content:flex-end;
+  justify-content:space-around;
+  align-items: center;
+}
+
