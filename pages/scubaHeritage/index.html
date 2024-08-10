@@ -5,24 +5,46 @@
       <title>Scuba Heritage</title>
       <link rel="icon" type="text/png" href="images/scubaLogo.png">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="../../style.css">
       <style>
 
     canvas {
-        display: block;
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: -25px;
       }
 
-    button {
-        display: left;
+    button, #nav {
+        float: right;
+        color: midnightblue;
+        border-color: white;
+        border-radius: 5px;
+        margin: 2px;
+    }
+
+    body{
+      background-image: url(images/pageBG.png);
+      background-repeat: no-repeat;
+      background-size: cover;
     }
       </style>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js" defer></script>
+<script src="sketch.js" defer></script>
   </head>
 
 
   <body>
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
-      <script src="sketch.js"></script>
-      <button onclick="window.location.reload()">Click to Restart!</button>
+    <div id="navBar">
+      <a href="https://github.com/TowafH/waveZero" target="_blank"><img id="logo" src="../../images/waveZero.png"></a>
+      <nav id="nav">
+          <a href="../../index.html">Home</a>
+          <a href="../oil/oil.html">Oil Spill</a>
+          <a href="../air/air.html">Air</a>
+          <a href="../scubaHeritage/index.html">Play Again!</a>
+      </nav>
+  </div>
    </body>
 </html>
