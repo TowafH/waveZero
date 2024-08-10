@@ -1,5 +1,6 @@
 body{
     background-image: url(bg.png);
+    text-align: center;
 }
 
 #content #locationInput {
@@ -8,6 +9,7 @@ body{
     border-color: #061B36;
     border-radius: 5px;
     margin: 2px;
+    font-size: 20px;
 }
 ::placeholder {
     color: rgb(236, 232, 232);
@@ -18,4 +20,59 @@ body{
     border-color: white;
     border-radius: 5px;
     margin: 2px;
+    font-size: 20px;
+}
+
+#content h1{
+    font-size: 50px;
+}
+
+#content h2{
+    width: 50vw;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.seperate{
+    width: 50vw;
+    border-color: skyblue;
+    box-shadow: 0 0 10px skyblue;
+    border-radius: 5px;
+}
+
+#day1, #day2, #day3 {
+    background-color: #1B81BF;
+    border: 1px solid #061B36;
+    border-radius: 5px;
+    box-shadow: 0 0 10px midnightblue;
+
+    height: 30vh;
+
+    width: 30vw;
+
+    text-align: center;
+}
+
+
+.displayHidden{
+    display: none;
+}
+
+#dayBoxes {
+    width: 100vw;
+    justify-content: center;
+    margin: 0 auto;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+#dayHeading {
+    font-size: 40px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#dayBoxes h2{
+    font-size: 30px;
 }
