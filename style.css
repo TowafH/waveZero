@@ -7,10 +7,12 @@ body{
     background-image: url(images/bg.png);
     background-repeat: no-repeat;
     background-size: cover ;
+    font-family: "Genos";
     margin: 0;
+    color: snow;
 }
 
-/* Content within parent #navBar */
+/* Content within #navBar */
 #navBar{
     display: flex;
     justify-content: space-between;
@@ -18,7 +20,7 @@ body{
 }
 
 #navBar #logo {
-    width: 100px;
+    width: 120px;
     height: auto;
     margin: 10px;
 }
@@ -26,8 +28,22 @@ body{
 #navBar #nav a {
     text-decoration: none;
     color: whitesmoke;
-    font-size: 25px;
+    font-size: 30px;
+    margin-top: -60px;
+    margin: 0 15px; 
+    min-width: 100px; 
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
 }
+
+#navBar #nav a:hover {
+    color: black;
+    background-color: whitesmoke;
+    transition: 0.5s;
+  }
+  
 
 #navBar #nav {
   width: 50vw;
@@ -35,5 +51,21 @@ body{
   justify-content:flex-end;
   justify-content:space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+/* Content within #content */
+
+#content h1{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#content h2{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 500;
+}
