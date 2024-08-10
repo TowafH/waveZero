@@ -1,0 +1,21 @@
+body{
+    background-image: url(bg.png);
+}
+
+#content #locationInput {
+    color: snow;
+    background-color: #1B81BF;
+    border-color: #061B36;
+    border-radius: 5px;
+    margin: 2px;
+}
+::placeholder {
+    color: rgb(236, 232, 232);
+  }
+
+#content #submitBtn {
+    color: midnightblue;
+    border-color: white;
+    border-radius: 5px;
+    margin: 2px;
+}
