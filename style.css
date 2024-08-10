@@ -19,11 +19,24 @@ body{
     align-items: center;
 }
 
+@keyframes spinLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the animation to the logo */
 #navBar #logo {
     width: 120px;
     height: auto;
     margin: 10px;
+    animation: spinLogo 4s linear infinite; /* Apply spinning animation */
 }
+
+
 
 #navBar #nav a {
     text-decoration: none;
