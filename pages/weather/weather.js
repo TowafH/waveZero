@@ -10,13 +10,16 @@ let weatherDescription = document.getElementById("weatherDesc")
 let dayBoxes = document.getElementById("dayBoxes");
 let dayHeading = document.getElementById("dayHeading");
 
-let dayLine = document.querySelector("hr")
+let dayLine = document.querySelectorAll("hr")
+
+let indexBoxes = document.getElementById("indexBoxes");
 
 let dayTemp = document.querySelectorAll(".dayTemp");
 let dayDate = document.querySelectorAll(".dayDate");
 let dayDesc = document.querySelectorAll(".dayDesc");
 let dayHumid = document.querySelectorAll(".dayHumid");
 let dayDew = document.querySelectorAll(".dayDew");
+let dayUV = document.querySelectorAll(".dayUV");
 
 //Functions
 let restrictDaysView = 3;
@@ -62,7 +65,13 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
         dayHeading.style.display = "flex";
         dayBoxes.style.display = "block";
         dayBoxes.style.display = "flex";
-        dayLine.style.display = "block";
+
+        indexBoxes.style.display = "block";
+        indexBoxes.style.display = "flex";
+        
+        for (let i = 0; i < dayLine.length; i++){
+            dayLine[i].style.display = "block";
+        }
 
         //Select Date for the three days
         for (let i = 0; i < restrictDaysView; i++){
@@ -87,6 +96,28 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
         //Select Dew for the three days
         for (let i = 0; i < restrictDaysView; i++){
             dayDew[i].innerText = "Dewpoint: " + myWeatherData.days[i].dew + "°"
+
+            // Conditonal Statement to Match up colors with the Dewpoint Index
+            if (myWeatherData.days[i].dew > 75){
+                dayDew[i].style.color = "#7e212e";
+            } else if (myWeatherData.days[i].dew >= 70 && myWeatherData.days[i].dew <= 75){
+                dayDew[i].style.color = "#F26B6C";
+            } else if (myWeatherData.days[i].dew >= 65 && myWeatherData.days[i].dew <= 69){
+                dayDew[i].style.color = "#CAC47C";
+            } else if (myWeatherData.days[i].dew >= 60 && myWeatherData.days[i].dew <= 64){
+                dayDew[i].style.color = "#F8BCAF";
+            } else if (myWeatherData.days[i].dew >= 55 && myWeatherData.days[i].dew <= 60){
+                dayDew[i].style.color = "#60D5C3"
+            } else if (myWeatherData.days[i].dew < 55){
+                dayDew[i].style.color = "#A2BCEC"
+            } else {
+                dayDew[i].style.color = "white";
+            }
+        }
+
+        //Select UV Index for the three days
+        for (let i = 0; i < restrictDaysView; i++){
+            dayUV[i].innerText = "UV Index: " + myWeatherData.days[i].uvindex; 
         }
     })
     //Check for Invalid Inputs
