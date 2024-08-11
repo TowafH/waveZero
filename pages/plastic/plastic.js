@@ -1,15 +1,20 @@
+let map;
+let marker;
+
 function initMap() {
-    let location = {
+    // Default location
+    let defaultLocation = {
         lat: 40.712,
         lng: -74.005
     };
 
-    let map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
         zoom: 4,
-        center: location
+        center: defaultLocation
     });
-    let marker = new google.maps.Marker({
-        position: location,
+
+    marker = new google.maps.Marker({
+        position: defaultLocation,
         map: map
     });
 }
