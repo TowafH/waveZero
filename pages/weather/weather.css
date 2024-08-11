@@ -1,6 +1,7 @@
 body{
-    background-image: url(bg.png);
+    background-image: url(weatherbg.png);
     text-align: center;
+    overflow-x: hidden;
 }
 
 #content #locationInput {
@@ -34,11 +35,15 @@ body{
 }
 
 hr {
+    height: .1vh;
     width: 50vw;
+    background-color: skyblue;
     border-color: skyblue;
     box-shadow: 0 0 10px skyblue;
     border-radius: 5px;
 }
+
+/* Days timeline */
 
 #day1, #day2, #day3 {
     background-color: #1B81BF;
@@ -79,4 +84,116 @@ hr {
 
 .dayTemp {
     margin-top: -15px;
+}
+
+/* Dew Index */
+
+table{
+    border-color:white;
+    background-color: #1B81BF;
+    margin: 0 auto;
+}
+
+
+td, th{
+font-size: 25px;
+color: snow;
+}
+
+#indexBoxes {
+    width: 100vw;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#oppresive {
+    background-color: #7e212e;
+}
+
+#vHumid {
+    background-color: #F26B6C;
+}
+
+#humid {
+    background-color: #CAC47C;
+}
+
+#sHumid {
+    background-color: #F8BCAF;
+}
+
+#comfort {
+    background-color: #60D5C3;
+}
+
+#dry {
+    background-color: #A2BCEC;
+}
+
+@media (max-width: 426px){
+
+    #content #locationInput {
+        color: snow;
+        background-color: #1B81BF;
+        border-color: #061B36;
+        border-radius: 5px;
+        margin: 2px;
+        font-size: 15px;
+    }
+
+    #content #submitBtn {
+        color: midnightblue;
+        border-color: white;
+        border-radius: 5px;
+        margin: 2px;
+        font-size: 15px;
+    }
+
+    #content h1{
+        font-size: 30px;
+    }
+    
+    #content h2{
+        width: 50vw;
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    #weatherDesc {
+        font-size: 15px;
+    }
+
+    #dayHeading {
+        font-size: 25px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    #dayBoxes h1, h2, h3{
+        font-size: 12px;
+    }
+
+    #indexBoxes {
+        width: 100vw;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    table{
+        border-color:white;
+        margin: 0 auto;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    td{
+        font-size: 20px;
+    }
 }
