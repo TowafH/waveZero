@@ -13,20 +13,6 @@
 
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="oil.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        #map{
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            height: 500px;
-            width: 50%;
-        }
-    </style>
 </head>
 <body>
     <!-- Nav Bar -->
@@ -53,6 +39,10 @@
             let map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 4,
                 center: location
+            });
+            let marker = new google.maps.Marker({
+                position: location,
+                map: map
             });
         }
     </script>
