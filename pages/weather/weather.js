@@ -1,6 +1,8 @@
 //Select Elements
 let locationInput = document.getElementById("locationInput");
 let submitBtn = document.getElementById("submitBtn");
+
+// Sound Effect by UNIVERSFIELD from Pixabay
 let successSound = new Audio("success.mp3");
 
 let locationTemp = document.getElementById("locationTemp");
