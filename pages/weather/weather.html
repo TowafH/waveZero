@@ -42,7 +42,9 @@
         <h3 id="weatherDesc"></h3>
         <br>
      </div>
+
      <hr class="displayHidden"> 
+
     <!-- Upcoming Days Content -->
 
      <h1 class="displayHidden" id="dayHeading">Upcoming Days</h1>
@@ -54,6 +56,7 @@
         <h3 class="dayDesc"></h3>
         <h3 class="dayHumid"></h3>
         <h3 class="dayDew"></h3>
+        <h3 class="dayUV"></h3>
      </div>
 
      <div id="day2">
@@ -62,6 +65,7 @@
         <h3 class="dayDesc"></h3>
         <h3 class="dayHumid"></h3>
         <h3 class="dayDew"></h3>
+        <h3 class="dayUV"></h3>
      </div>
 
      <div id="day3">
@@ -70,7 +74,76 @@
         <h3 class="dayDesc"></h3>
         <h3 class="dayHumid"></h3>
         <h3 class="dayDew"></h3>
+        <h3 class="dayUV"></h3>
      </div>
     </div>
+    <br>
+    <hr class="displayHidden"> 
 
+    <!-- Indexes -->
+    <div id="indexBoxes" class="displayHidden">
+        <div id="dewIndex">
+            <table border="1">
+                <th>Dew Point (°F)</th>
+                <th>Feels Like</th>
+                <tr id="oppresive">
+                  <td class="bold">&gt;75°</td>
+                  <td>Oppresive</td>
+                </tr>
+                <tr id="vHumid">
+                  <td class="bold">70-75°</td>
+                  <td>Very Humid</td>
+                </tr>
+                <tr id="humid">
+                  <td class="bold">65-69°</td>
+                  <td>Humid</td>
+                </tr>
+                <tr id="sHumid">
+                  <td class="bold">60-64°</td>
+                  <td>Slightly Humid</td>
+                </tr>
+                <tr id="comfort">
+                  <td class="bold">55-60°</td>
+                  <td>Comfortable</td>
+                </tr>
+                <tr id="dry">
+                    <td class="bold">&lt;55</td>
+                    <td>Dry</td>
+                  </tr>
+              </table>
+        </div>
+
+        <div id="uvIndex">
+            <table border="1">
+                <th>UV Index</th>
+                <th>Level</th>
+                <th>Precautions</th>
+                <tr>
+                  <td>Low</td>
+                  <td>1-2</td>
+                  <td>No Protection Required</td>
+                </tr>
+                <tr>
+                  <td>70-75°</td>
+                  <td>Very Humid</td>
+                </tr>
+                <tr>
+                  <td>65-69°</td>
+                  <td>Humid</td>
+                </tr>
+                <tr>
+                  <td>60-64°</td>
+                  <td>Slightly Humid</td>
+                </tr>
+                <tr>
+                  <td>55-60°</td>
+                  <td>Comfortable</td>
+                </tr>
+                <tr>
+                    <td>&lt;55</td>
+                    <td>Dry</td>
+                  </tr>
+              </table>
+        </div>
+    </div>
 </html>
