@@ -9,11 +9,16 @@ let weatherDescription = document.getElementById("weatherDesc")
 
 let dayBoxes = document.getElementById("dayBoxes");
 let dayHeading = document.getElementById("dayHeading");
+
+let dayLine = document.querySelector("hr")
+
 let dayTemp = document.querySelectorAll(".dayTemp");
 let dayDate = document.querySelectorAll(".dayDate");
 let dayDesc = document.querySelectorAll(".dayDesc");
-//Functions
+let dayHumid = document.querySelectorAll(".dayHumid");
+let dayDew = document.querySelectorAll(".dayDew");
 
+//Functions
 let restrictDaysView = 3;
 
 function generateWeather(event){
@@ -52,11 +57,12 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
         //Weather Description
         weatherDescription.innerText = myWeatherData.description;
         
-        //Display Boxes+Heading
+        //Display Boxes+Heading+HR
         dayHeading.style.display = "block";
         dayHeading.style.display = "flex";
         dayBoxes.style.display = "block";
         dayBoxes.style.display = "flex";
+        dayLine.style.display = "block";
 
         //Select Date for the three days
         for (let i = 0; i < restrictDaysView; i++){
@@ -68,9 +74,19 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
             dayTemp[i].innerText = myWeatherData.days[i].temp + " °F";
         }
 
-        //Select Desc for the three days
+        //Select Conditions for the three days
         for(let i = 0; i < restrictDaysView; i++){
-            dayDesc[i].innerText = myWeatherData.days[i].description;
+            dayDesc[i].innerText = myWeatherData.days[i].conditions;
+        }
+
+        //Select Humid for the three days
+        for (let i = 0; i < restrictDaysView; i++){
+            dayHumid[i].innerText = "Humidity: " + myWeatherData.days[i].humidity + "%"
+        }
+
+        //Select Dew for the three days
+        for (let i = 0; i < restrictDaysView; i++){
+            dayDew[i].innerText = "Dewpoint: " + myWeatherData.days[i].dew + "°"
         }
     })
     //Check for Invalid Inputs
