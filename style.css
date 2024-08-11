@@ -19,20 +19,20 @@ body{
 
 /* Changing scrollbar Color */
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track{
-    background: #061B36;
+    background: skyblue;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: black;
+    background: #1B81BF;
     border-radius: 10px;
 }
 
 div:hover::-webkit-scrollbar-thumb{
-    background: black;
+    background: #1B81BF;
 }
 
 
