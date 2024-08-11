@@ -1,1 +1,63 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Spill • Wave Zero</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- "Genos" in CSS -->
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="oil.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 500px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div id="navBar">
+        <a href="https://github.com/TowafH/waveZero" target="_blank"><img id="logo" src="../../images/waveZero.png"></a>
+        <nav id="nav">
+            <a href="../../index.html">Home</a>
+            <a href="../weather/weather.html">Weather</a>
+            <a href="../air/air.html">Air</a>
+            <a href="../scubaHeritage/index.html">Arcade</a>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            let location = {
+                lat: 40.712,
+                lng: -74.005
+            };
+
+            let map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location
+            });
+        }
+    </script>
+    
+    <!-- Google Maps + KEY -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS4Bbctyyd-DVAdntx7s4LhKhcpKh5Ddc&callback=initMap"></script>
+</body>
+</html>
