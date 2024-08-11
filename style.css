@@ -17,6 +17,29 @@ body{
     color: snow;
 }
 
+/* Changing scrollbar Color */
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: #061B36;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 10px;
+}
+
+div:hover::-webkit-scrollbar-thumb{
+    background: black;
+}
+
+
+::-webkit-scrollbar-thumb:hover { 
+    background: whitesmoke;
+}
+
 /* Content within #navBar */
 #navBar{
     display: flex;
@@ -33,7 +56,7 @@ body{
     }
 }
 
-/* Apply the animation to the logo */
+
 #navBar #logo {
     width: 120px;
     height: auto;
@@ -74,7 +97,7 @@ body{
 /* Content within #content */
 
 #content{
-    margin-top: -40px;
+    margin-top: 10px;
 }
 
 #content h1, h2, h3{
