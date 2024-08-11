@@ -1,6 +1,7 @@
 //Select Elements
 let locationInput = document.getElementById("locationInput");
 let submitBtn = document.getElementById("submitBtn");
+let successSound = new Audio("success.mp3");
 
 let locationTemp = document.getElementById("locationTemp");
 let locationTitle = document.getElementById("locationTitle");
@@ -60,6 +61,9 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
         //Weather Description
         weatherDescription.innerText = myWeatherData.description;
         
+        //Play Audio
+        successSound.play();
+
         //Display Boxes+Heading+HR
         dayHeading.style.display = "block";
         dayHeading.style.display = "flex";
