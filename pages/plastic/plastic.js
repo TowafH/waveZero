@@ -2,7 +2,6 @@ let map;
 let marker;
 
 function initMap() {
-    // Default location
     let defaultLocation = {
         lat: 40.712,
         lng: -74.005
@@ -18,3 +17,26 @@ function initMap() {
         map: map
     });
 }
+
+let submitBtn = document.getElementById("submitBtn")
+
+function showMicroPlastics() {
+
+fetch("plastics.json")
+//Preview the JSON 
+.then(function(response){
+    console.log(response);
+    return response.json();
+})
+.then(function(myPlasticData){
+    //Preview JSON in Console
+    console.log(myPlasticData);
+
+})
+//Check for Invalid Inputs
+.catch(function(error) {
+    alert('Failed to fetch weather data. Please try again!');
+})
+}
+
+submitBtn.addEventListener("click", showMicroPlastics);
