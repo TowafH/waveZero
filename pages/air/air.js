@@ -89,7 +89,7 @@ function getAirQuality(lat, lon, cityName) {
             } else if (aqiValue === 2) {
                 severity.textContent = status[1];
                 description.textContent = advice[1];
-                backgroundColor = "#FAEF5C";
+                backgroundColor = "#d6ce51";
             } else if (aqiValue === 3) {
                 severity.textContent = status[2];
                 description.textContent = advice[2];
