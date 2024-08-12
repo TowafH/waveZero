@@ -84,22 +84,27 @@ function getAirQuality(lat, lon, cityName) {
 
             if (aqiValue === 1) {
                 severity.textContent = status[0];
+                aqi.style.color = "#7FC242"
                 description.textContent = advice[0];
                 backgroundColor = "#7FC242";
             } else if (aqiValue === 2) {
                 severity.textContent = status[1];
+                aqi.style.color = "#d6ce51"
                 description.textContent = advice[1];
                 backgroundColor = "#d6ce51";
             } else if (aqiValue === 3) {
                 severity.textContent = status[2];
+                aqi.style.color = "#ED8430"
                 description.textContent = advice[2];
                 backgroundColor = "#ED8430";
             } else if (aqiValue === 4) {
                 severity.textContent = status[3];
+                aqi.style.color = "#E83425"
                 description.textContent = advice[3];
                 backgroundColor = "#E83425";
             } else {
                 severity.textContent = status[4];
+                aqi.style.color = "#854794"
                 description.textContent = advice[4];
                 backgroundColor = "#854794";
                 severity.style.color = "white";
