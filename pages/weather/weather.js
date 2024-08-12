@@ -124,6 +124,19 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
         //Select UV Index for the three days
         for (let i = 0; i < restrictDaysView; i++){
             dayUV[i].innerText = "UV Index: " + myWeatherData.days[i].uvindex; 
+
+            // Conditonal Statement to Match up colors with the UV Index
+            if (myWeatherData.days[i].uvindex >= 11){
+                dayUV[i].style.color = "#652C91";
+            } else if (myWeatherData.days[i].uvindex >= 8 && myWeatherData.days[i].uvindex <= 10){
+                dayUV[i].style.color = "#ED1B24";
+            } else if (myWeatherData.days[i].uvindex >= 6 && myWeatherData.days[i].uvindex <= 7){
+                dayUV[i].style.color = "#FAAF40";
+            } else if (myWeatherData.days[i].uvindex >= 3 && myWeatherData.days[i].uvindex <= 5){
+                dayUV[i].style.color = "#ded449";
+            } else if (myWeatherData.days[i].uvindex >= 1 && myWeatherData.days[i].uvindex <= 2){
+                dayUV[i].style.color = "#8DC53F"
+            }
         }
     })
     //Check for Invalid Inputs
