@@ -24,6 +24,8 @@ let dayHumid = document.querySelectorAll(".dayHumid");
 let dayDew = document.querySelectorAll(".dayDew");
 let dayUV = document.querySelectorAll(".dayUV");
 
+let articlesBox = document.getElementById("articlesBox")
+
 //Functions
 let restrictDaysView = 3;
 
@@ -74,6 +76,9 @@ fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
 
         indexBoxes.style.display = "block";
         indexBoxes.style.display = "flex";
+
+        articlesBox.style.display = "block";
+        articlesBox.style.display = "flex";
         
         for (let i = 0; i < dayLine.length; i++){
             dayLine[i].style.display = "block";
