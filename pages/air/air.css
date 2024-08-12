@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#content #airInput {
+    color: snow;
+    background-color: #1B81BF;
+    border-color: #061B36;
+    border-radius: 5px;
+    margin: 10px; /* Added margin for spacing */
+    padding: 10px; /* Added padding */
+    font-size: 20px;
+}
+
+#content #airSubmit {
+    color: midnightblue;
+    border-color: white;
+    border-radius: 5px;
+    margin: 10px 10px 20px; /* Added margin for spacing */
+    padding: 10px; /* Added padding */
+    font-size: 20px;
+}
+
+#content #airQuality {
+    margin-top: 20px; /* Added margin to create space between result and submit button */
+}
+
+#content h1 {
+    font-size: 50px;
+}
