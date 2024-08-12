@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wave Zero</title>
+    <title>Wave Zero - Air Quality</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="air.css">
+    <script src="air.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- "Genos" in CSS -->
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="air.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Nav Bar -->
     <div id="navBar">
-        <a href="https://github.com/TowafH/waveZero" target="_blank"><img id="logo" src="../../images/waveZero.png"></a>
+        <a href="https://github.com/TowafH/waveZero" target="_blank"><img id="logo" src="../../images/waveZero.png" alt="Wave Zero Logo"></a>
         <nav id="nav">
             <a href="../../index.html">Home</a>
             <a href="../plastic/plastic.html">Microplastics</a>
@@ -26,3 +23,20 @@
             <a href="../scubaHeritage/index.html">Arcade</a>
         </nav>
     </div>
+
+    <div id="content">
+        <h1>Air Quality</h1>
+        <div class="center">
+            <input id="airInput" placeholder="Enter your city name!">
+            <button id="airSubmit">Submit</button>
+        </div>
+        <div id="airQuality"></div>
+        <div id="good"></div>
+        <div id="fair"></div>
+        <div id="moderate"></div>
+        <div id="poor"></div>
+        <div id="very_poor"></div>
+    </div>
+</body>
+</html>
+
