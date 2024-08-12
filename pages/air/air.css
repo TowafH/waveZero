@@ -32,3 +32,68 @@ body {
 #content h1 {
     font-size: 50px;
 }
+
+.displayHidden{
+    display: none;
+}
+
+table{
+    justify-content: center;
+    border-color: white;
+    margin-top: 20px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#vUnhealthy {
+    background-color: #854794;
+}
+
+#Unhealthy {
+    background-color: #E83425;
+}
+
+#sUnhealthy {
+    background-color: #ED8430;
+}
+
+#mod {
+    background-color: #d6ce51;
+}
+
+#good {
+    background-color: #7FC242;
+}
+
+@media (max-width: 769px){
+
+    #content #airInput {
+        color: snow;
+        background-color: #1B81BF;
+        border-color: #061B36;
+        border-radius: 5px;
+        margin: 2px;
+        font-size: 15px;
+    }
+
+    #content #airSubmit {
+        color: midnightblue;
+        border-color: white;
+        border-radius: 5px;
+        margin: 2px;
+        font-size: 15px;
+    }
+
+    #content h1{
+        font-size: 30px;
+    }
+    
+    #content h2{
+        width: 50vw;
+        font-weight: 600;
+        font-size: 30px;
+    }
+}
+
