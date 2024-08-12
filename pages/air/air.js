@@ -1,7 +1,7 @@
 var airQualityDiv = document.getElementById('airQuality');
 var airInput = document.getElementById('airInput');
 var airSubmitBtn = document.getElementById('airSubmit');
-
+let indexBoxes = document.getElementById("indexBoxes");
 // Sound Effect by UNIVERSFIELD from Pixabay
 let successSound = new Audio("../weather/success.mp3");
 
@@ -25,6 +25,7 @@ function getLatLon(cityName) {
             return response.json();
         })
         .then(function(latLonData) {
+            console.log(latLonData);
             if (geocodingAPI.length == 0) {
                 throw new Error("City not found.");
             }
@@ -46,6 +47,7 @@ function getAirQuality(lat, lon, cityName) {
             return response.json();
         })
         .then(function(airQualityData) {
+            console.log(airQualityData)
             if (airQualityData.list.length === 0) {
                 throw new Error("No air quality data available.");
             }
@@ -117,6 +119,10 @@ function getAirQuality(lat, lon, cityName) {
 
             // Append the colorDiv to the airQualityDiv
             airQualityDiv.appendChild(colorDiv);
+
+            
+             //Reveal Index Scale
+             indexBoxes.style.display = "block";
         })
         .catch(function(error) {
             console.error("Error:", error);
