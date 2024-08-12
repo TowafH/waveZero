@@ -110,6 +110,7 @@ color: snow;
     font-weight: bold;
 }
 
+/* Dewpoint Index */
 #oppresive {
     background-color: #7e212e;
 }
@@ -133,6 +134,30 @@ color: snow;
 #dry {
     background-color: #A2BCEC;
 }
+
+
+/* UV Index */
+#low {
+    background-color: #8DC53F;
+}
+
+#mod {
+    background-color: #ded449;
+}
+
+#high {
+    background-color: #FAAF40;
+}
+
+#vHigh {
+    background-color: #ED1B24;
+}
+
+#extreme {
+    background-color: #652C91;
+}
+
+
 
 @media (max-width: 426px){
 
