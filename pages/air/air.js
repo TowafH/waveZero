@@ -19,13 +19,13 @@ airSubmitBtn.addEventListener("click", function(event) {
 });
 
 function getLatLon(cityName) {
-    var latLonAPI = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=1&appid=8e61a85e3b57bba628d9d4ef2f4c94c7';
-    fetch(latLonAPI)
+    var geocodingAPI = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=1&appid=4111c10cf035d9d26cbb10831caa0aad';
+    fetch(geocodingAPI)
         .then(function(response) {
             return response.json();
         })
         .then(function(latLonData) {
-            if (latLonData.length == 0) {
+            if (geocodingAPI.length == 0) {
                 throw new Error("City not found.");
             }
             var lat = latLonData[0].lat;
@@ -33,14 +33,14 @@ function getLatLon(cityName) {
             getAirQuality(lat, lon, cityName);
             
         })
-        .catch(function(error) {
+        .catch(function(error) {  
             console.error("Error:", error);
             alert("Failed to fetch latitude and longitude. Please try again.");
         });
 }
 
 function getAirQuality(lat, lon, cityName) {
-    var airQualityAPI = 'https://api.openweathermap.org/data/2.5/air_pollution?lat=' + lat + '&lon=' + lon + '&appid=8e61a85e3b57bba628d9d4ef2f4c94c7';
+    var airQualityAPI = 'https://api.openweathermap.org/data/2.5/air_pollution?lat=' + lat + '&lon=' + lon + '&appid=4111c10cf035d9d26cbb10831caa0aad';
     fetch(airQualityAPI)
         .then(function(response) {
             return response.json();
