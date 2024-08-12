@@ -10,8 +10,10 @@
     margin: 0 auto;
     height: 400px;
     width: 75%;
+    border-radius: 10px;
 }
 
 #content h1 {
     margin-top: 50px;
 }
+
