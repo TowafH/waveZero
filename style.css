@@ -164,3 +164,7 @@ table a{
 table a:hover{
     color: skyblue
 }
+
+table td{
+    font-weight: 550;
+}
